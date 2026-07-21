@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String
+  content     String
+  category    String
+  image       String?
+  readTime    Int      @default(5)
+  publishedAt DateTime @default(now())
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Exploration {
+  id              String @id @default(cuid())
+  slug            String @unique
+  title           String
+  shortDescription String
+  fullDescription String
+  whyPrescribed   String
+  steps           String
+  preparation     String
+  image           String?
+  icon            String
+}
+
+model Regime {
+  id          String @id @default(cuid())
+  slug        String @unique
+  title       String
+  pathology   String
+  summary     String
+  breakfast   String
+  lunch       String
+  dinner      String
+  snacks      String
+  allowed     String
+  forbidden   String
+  tips        String
+  downloadUrl String?
+}
+
+model Question {
+  id        String   @id @default(cuid())
+  author    String?
+  content   String
+  answer    String
+  createdAt DateTime @default(now())
+  votes     Int      @default(0)
+}
+
+model Tip {
+  id       String @id @default(cuid())
+  title    String
+  category String
+  image    String?
+  summary  String
+}
+
+model Survey {
+  id            String           @id @default(cuid())
+  question      String
+  options       String
+  correctAnswer Int
+  responses     SurveyResponse[]
+}
+
+model SurveyResponse {
+  id         String   @id @default(cuid())
+  surveyId   String
+  survey     Survey   @relation(fields: [surveyId], references: [id])
+  option     Int
+  isCorrect  Boolean
+  createdAt  DateTime @default(now())
+}
+
+model Stat {
+  id    String @id @default(cuid())
+  label String
+  value Int
+  suffix String?
+}

@@ -1,0 +1,121 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: "Poppins", system-ui, sans-serif;
+    --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+
+    --background: #F8FAFB;
+    --foreground: #1E2A32;
+    --card: #FFFFFF;
+    --card-foreground: #1E2A32;
+    --popover: #FFFFFF;
+    --popover-foreground: #1E2A32;
+    --primary: #2B5F7A;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F0F4F6;
+    --secondary-foreground: #1E2A32;
+    --muted: #F0F4F6;
+    --muted-foreground: #5A6B75;
+    --accent: #E8674A;
+    --accent-foreground: #FFFFFF;
+    --destructive: #E8674A;
+    --destructive-foreground: #FFFFFF;
+    --border: #E2E8EC;
+    --input: #E2E8EC;
+    --ring: #4A8CAB;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: #0F1519;
+    --foreground: #F8FAFB;
+    --card: #1A2329;
+    --card-foreground: #F8FAFB;
+    --popover: #1A2329;
+    --popover-foreground: #F8FAFB;
+    --primary: #4A8CAB;
+    --primary-foreground: #FFFFFF;
+    --secondary: #243038;
+    --secondary-foreground: #F8FAFB;
+    --muted: #243038;
+    --muted-foreground: #9EACB4;
+    --accent: #E98870;
+    --accent-foreground: #FFFFFF;
+    --destructive: #E98870;
+    --destructive-foreground: #FFFFFF;
+    --border: #2B3D47;
+    --input: #2B3D47;
+    --ring: #4A8CAB;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    @apply font-semibold tracking-tight text-foreground;
+  }
+
+  /* Respect reduced motion at the OS level */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #2B5F7A 0%, #4A8CAB 100%);
+  }
+
+  .gradient-soft {
+    background: linear-gradient(135deg, #F0F6F9 0%, #FFFFFF 100%);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, #E8674A 0%, #E98870 100%);
+  }
+
+  .blob-shape {
+    border-radius: 60% 40% 50% 70% / 50% 60% 40% 50%;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
