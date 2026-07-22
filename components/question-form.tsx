@@ -35,7 +35,7 @@ export function QuestionForm() {
         Poser une question
       </h2>
       <p className="mt-2 text-sm text-muted-foreground">
-        Votre question sera publiée anonymement si vous ne renseignez pas votre prénom.
+        Laissez un message au cabinet. Le prénom est optionnel.
       </p>
 
       <AnimatePresence>
@@ -52,7 +52,9 @@ export function QuestionForm() {
               <p className="font-medium">Merci pour votre question !</p>
             </div>
             <p className="mt-1 text-sm">
-              Elle sera publiée après modération et une réponse vous y sera apportée.
+              Merci pour votre message. Sur cette version statique du site, les questions
+              ne sont pas enregistrées en ligne — contactez le cabinet pour une réponse
+              personnalisée.
             </p>
           </motion.div>
         )}
