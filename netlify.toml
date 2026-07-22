@@ -1,0 +1,7 @@
+# Déploiement Netlify de la version statique (sans base de données)
+[build]
+  publish = "static"
+  command = "echo 'Static site — no build required'"
+
+[build.environment]
+  NODE_VERSION = "20"

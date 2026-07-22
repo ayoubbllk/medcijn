@@ -4,7 +4,12 @@ Site web éditorial pour un cabinet de cardiologie. L'objectif est de sensibilis
 
 > **Important** : ce site ne propose pas de prise de rendez-vous. Tous les contenus sont à visée éducative et informatives. Ils ne remplacent pas une consultation médicale.
 
-## Stack technique
+## Version statique (Netlify, sans base de données)
+
+Le dossier [`static/`](./static) contient une version HTML/CSS/JS autonome (carte Algérie interactive incluse).  
+Sur Netlify, le publish directory est `static` (voir `netlify.toml`).
+
+## Stack technique (app Next.js)
 
 - Next.js 14 (App Router) + TypeScript
 - Tailwind CSS + shadcn/ui

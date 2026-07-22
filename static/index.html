@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CardioConseils — Comprendre et prendre soin de votre cœur</title>
+  <meta name="description" content="Espace de sensibilisation cardiologique pour les patients algériens : astuces, explorations et Q&A." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </span>
+        <span>Cardio<span>Conseils</span></span>
+      </a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Accueil</a>
+        <a href="blog.html">Blog</a>
+        <a href="explorations.html">Explorations</a>
+        <a href="regimes.html">Régimes</a>
+      </div>
+      <a class="btn btn-primary nav-cta" href="qa.html">Posez votre question</a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu container">
+      <a class="active" href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+      <a href="explorations.html">Explorations</a>
+      <a href="regimes.html">Régimes</a>
+      <a href="qa.html">Posez votre question</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-wrap">
+      <div class="hero gradient-hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 2v2M11 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 11h2M20 11h2M4.93 17.66l1.41-1.41M17.66 4.93l1.41-1.41"/><circle cx="12" cy="12" r="4"/></svg>
+              Cabinet de cardiologie
+            </span>
+            <h1>Un cœur informé, un cœur protégé.</h1>
+            <p class="hero-lead">
+              Le premier espace de sensibilisation cardiologique pensé pour les patients algériens :
+              astuces de prévention, explications claires des examens et réponses à vos questions.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-outline-white" href="blog.html">Découvrir les astuces santé</a>
+              <a class="btn btn-ghost-white" href="explorations.html">Les explorations</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="chat-bubble b1"><span class="ico">💬</span><span class="lines"><i></i><i></i></span></div>
+            <div class="chat-bubble b2"><span class="ico">❤️</span><span class="lines"><i></i><i></i></span></div>
+            <div class="chat-bubble b3"><span class="ico">📅</span><span class="lines"><i></i><i></i></span></div>
+            <div class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Cardiologue souriant" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat-card"><strong>42+</strong><span>Articles publiés</span></div>
+      <div class="stat-card"><strong>1200</strong><span>Patients sensibilisés</span></div>
+      <div class="stat-card"><strong>18</strong><span>Années d'expérience</span></div>
+      <div class="stat-card"><strong>6</strong><span>Explorations proposées</span></div>
+    </div>
+
+    <!-- Explorations -->
+    <section class="section" id="explorations">
+      <div class="container explo-grid">
+        <div class="explo-photo-wrap">
+          <div class="explo-photo">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Médecin consultant une tablette" />
+          </div>
+          <div class="explo-badge"><strong>5+</strong><span>examens expliqués</span></div>
+        </div>
+        <div class="explo-content">
+          <h2><span class="accent">Patient</span>, comprenez enfin vos examens du cœur !</h2>
+          <p class="section-lead">Chaque exploration est expliquée simplement, avec sa préparation.</p>
+          <div class="explo-list">
+            <a class="explo-item" href="explorations.html#ecg">
+              <span class="ico" aria-hidden="true">📈</span>
+              <span><strong>ECG</strong><span>Activité électrique du cœur</span></span>
+              <span class="chev">›</span>
+            </a>
+            <a class="explo-item" href="explorations.html#echo">
+              <span class="ico" aria-hidden="true">💓</span>
+              <span><strong>Échocardiographie</strong><span>Visualiser le cœur en mouvement</span></span>
+              <span class="chev">›</span>
+            </a>
+            <a class="explo-item" href="explorations.html#effort">
+              <span class="ico" aria-hidden="true">🚴</span>
+              <span><strong>Épreuve d'effort</strong><span>Le cœur sous effort contrôlé</span></span>
+              <span class="chev">›</span>
+            </a>
+            <a class="explo-item" href="explorations.html#holter">
+              <span class="ico" aria-hidden="true">⏱️</span>
+              <span><strong>Holter</strong><span>Surveillance sur 24 h</span></span>
+              <span class="chev">›</span>
+            </a>
+          </div>
+          <a class="link-more" href="explorations.html">Voir toutes les explorations ›</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Algeria map -->
+    <section class="section map-section" id="algerie">
+      <div class="container map-grid">
+        <div>
+          <h2>Nous sommes présents dans <span class="accent">les 58 wilayas</span> du pays…</h2>
+          <p class="section-lead">Survolez la carte pour découvrir chaque wilaya : nos contenus de prévention sont lus d'Alger à In Guezzam.</p>
+          <div class="map-highlights">
+            <div class="map-card">
+              <span class="ico" aria-hidden="true">🏅</span>
+              <p>Le 1er espace éditorial de cardiologie pensé pour les patients algériens.</p>
+            </div>
+            <div class="map-card">
+              <span class="ico" aria-hidden="true">👥</span>
+              <p>Une équipe de cardiologues engagée dans la prévention et la vulgarisation.</p>
+            </div>
+            <div class="map-card">
+              <span class="ico" aria-hidden="true">💬</span>
+              <p>Des réponses personnalisées à vos questions, où que vous soyez.</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <div id="algeria-map-host"></div>
+          <div id="map-tooltip" class="map-tooltip" role="status"></div>
+          <div class="map-selected" aria-live="polite">
+            <span class="ico" aria-hidden="true">📍</span>
+            <div>
+              <small id="map-selected-code">Wilaya 16</small>
+              <strong id="map-selected-name">Alger</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="steps-wrap">
+      <div class="steps-panel gradient-hero">
+        <h2><span class="dark">Patient</span>, prenez soin de votre cœur en trois étapes simples…</h2>
+        <div class="steps-grid">
+          <div class="steps-line" aria-hidden="true"></div>
+          <a class="step" href="blog.html">
+            <span class="step-num">1</span>
+            <span class="step-body">
+              <span aria-hidden="true" style="font-size:2rem">📖</span>
+              <h3>Lisez nos astuces santé</h3>
+              <p>Des gestes simples pour protéger votre cœur au quotidien.</p>
+            </span>
+          </a>
+          <a class="step" href="explorations.html">
+            <span class="step-num">2</span>
+            <span class="step-body">
+              <span aria-hidden="true" style="font-size:2rem">🩺</span>
+              <h3>Comprenez vos examens</h3>
+              <p>ECG, échographie, épreuve d'effort : tout est expliqué clairement.</p>
+            </span>
+          </a>
+          <a class="step" href="qa.html">
+            <span class="step-num">3</span>
+            <span class="step-body">
+              <span aria-hidden="true" style="font-size:2rem">❓</span>
+              <h3>Posez vos questions</h3>
+              <p>Notre équipe répond sans jargon médical.</p>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Astuces du moment</p>
+        <h2>Petits gestes, <span class="accent">grand cœur</span></h2>
+        <p class="section-lead">Des conseils simples et concrets pour prendre soin de votre cœur.</p>
+        <div class="tips-track" style="margin-top:2.5rem">
+          <article class="tip-card">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span class="tip-tag">Alimentation</span>
+            <h3>Mangez 5 portions de fruits et légumes</h3>
+            <p>Vitamines, minéraux et fibres qui protègent les vaisseaux sanguins.</p>
+          </article>
+          <article class="tip-card">
+            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span class="tip-tag">Activité physique</span>
+            <h3>Marchez 30 minutes chaque jour</h3>
+            <p>Améliore la circulation, la pression artérielle et le moral.</p>
+          </article>
+          <article class="tip-card">
+            <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span class="tip-tag">Stress</span>
+            <h3>Respirez 5 minutes pour apaiser le cœur</h3>
+            <p>La respiration lente réduit le stress et calme le rythme cardiaque.</p>
+          </article>
+          <article class="tip-card">
+            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span class="tip-tag">Tabac</span>
+            <h3>Dites stop au tabac</h3>
+            <p>Le geste le plus impactant pour votre cœur. Les bénéfices commencent vite.</p>
+          </article>
+          <article class="tip-card">
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span class="tip-tag">Sommeil</span>
+            <h3>Dormez 7 à 8 heures par nuit</h3>
+            <p>Un sommeil réparateur régule la tension et diminue l'inflammation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <section class="alert-wrap">
+      <div class="alert-panel">
+        <div class="alert-grid">
+          <div>
+            <span class="alert-badge">⚠ Signes d'alerte</span>
+            <h2>Ces signes doivent vous alerter</h2>
+            <p>Certaines sensations ne doivent pas être minimisées. Si vous les ressentez, consultez rapidement ou appelez les secours.</p>
+            <div class="emergency-box">
+              <p>En cas d'urgence vitale, composez le</p>
+              <a href="tel:14">📞 14</a>
+              <small>Protection civile — Secours médicaux d'urgence</small>
+            </div>
+          </div>
+          <div class="alert-list">
+            <details class="alert-item" open>
+              <summary>❤️ Douleur ou oppression thoracique</summary>
+              <p>Sensation d'oppression, d'écrasement ou de brûlure au centre de la poitrine. Appelez le 14 en cas de doute.</p>
+            </details>
+            <details class="alert-item">
+              <summary>💨 Essoufflement anormal</summary>
+              <p>Essoufflement au repos, à l'effort ou en position allongée, surtout s'il est nouveau.</p>
+            </details>
+            <details class="alert-item">
+              <summary>⚡ Palpitations ou rythme irrégulier</summary>
+              <p>Battements rapides, irréguliers ou puissants, avec vertiges ou malaise.</p>
+            </details>
+            <details class="alert-item">
+              <summary>🧠 Vertiges ou perte de connaissance</summary>
+              <p>Malaise, vertiges intenses ou évanouissement : consultez rapidement.</p>
+            </details>
+            <details class="alert-item">
+              <summary>🦵 Gonflement des chevilles</summary>
+              <p>Œdème bilatéral des chevilles, surtout le soir, à faire examiner.</p>
+            </details>
+            <details class="alert-item">
+              <summary>🔋 Fatigue inhabituelle extrême</summary>
+              <p>Fatigue soudaine et persistante, notamment chez les femmes : ne l'ignorez pas.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interaction -->
+    <section class="section">
+      <div class="container">
+        <div class="section-center">
+          <p class="section-label">Échangeons</p>
+          <h2>Votre <span class="accent">question</span>, notre réponse</h2>
+          <p class="section-lead">Testez vos connaissances et découvrez les questions de la communauté.</p>
+        </div>
+        <div class="qa-preview">
+          <div class="survey" data-survey data-correct="3">
+            <h3>Sondage santé</h3>
+            <p><strong>Connaissez-vous les signes d'alerte d'un AVC ?</strong></p>
+            <div class="survey-options">
+              <button type="button">Face qui tombe d'un côté</button>
+              <button type="button">Difficulté à lever un bras</button>
+              <button type="button">Troubles de la parole</button>
+              <button type="button">Toutes ces réponses</button>
+            </div>
+            <div class="survey-feedback" role="status"></div>
+          </div>
+          <div class="qa-mini">
+            <h3>Dernières questions</h3>
+            <article>
+              <small>Marie, 62 ans</small>
+              <h4>Je ressens parfois des palpitations après le café. Dois-je m'inquiéter ?</h4>
+              <p>Les palpitations peuvent être liées à la caféine ou au stress. Consultez si elles persistent…</p>
+            </article>
+            <article>
+              <small>Luc, 45 ans</small>
+              <h4>Quels sont les signes d'alerte d'un infarctus ?</h4>
+              <p>Douleur thoracique, irradiation, essoufflement, nausées… En cas de doute, appelez le 14.</p>
+            </article>
+            <a class="link-more" href="qa.html">Voir toutes les questions ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-panel gradient-hero">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" style="color:#fff">
+            <span class="logo-mark" style="background:rgba(255,255,255,.15)">❤️</span>
+            <span>CardioConseils</span>
+          </a>
+          <p>Un cabinet de cardiologie engagé pour la prévention, au service des patients de toute l'Algérie.</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="explorations.html">Explorations</a></li>
+            <li><a href="regimes.html">Régimes</a></li>
+            <li><a href="qa.html">Q&A</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-contact">
+            <li>📍 12 rue Didouche Mourad, Alger Centre</li>
+            <li>📞 <a href="tel:+213211234567">+213 21 12 34 56</a></li>
+            <li>✉️ <a href="mailto:contact@cardioconseils.dz">contact@cardioconseils.dz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 CardioConseils. Contenu informatif, ne remplace pas une consultation médicale.</p>
+        <p>En cas d'urgence, appelez le <a href="tel:14">14</a> (Protection civile).</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fab" href="tel:14" aria-label="Appeler le 14">📞</a>
+
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
