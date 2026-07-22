@@ -59,6 +59,7 @@ app/
 components/
   ui/                       # Composants shadcn/ui
   sections/                 # Sections de la page d'accueil
+  algeria-map.tsx           # Carte interactive des 58 wilayas (public/algeria.svg)
   card.tsx                  # Carte réutilisable
   flip-card.tsx             # Carte 3D retournable
   stat-counter.tsx          # Compteur animé

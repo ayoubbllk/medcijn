@@ -11,7 +11,7 @@ interface ECGDividerProps {
 
 export function ECGDivider({
   className = "",
-  color = "#2B5F7A",
+  color = "#16B0B7",
 }: ECGDividerProps) {
   const ref = useRef<SVGSVGElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });

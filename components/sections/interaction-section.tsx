@@ -21,7 +21,7 @@ export async function InteractionSection() {
             Échangeons
           </span>
           <h2 className="mt-3 text-3xl font-bold font-heading text-foreground md:text-4xl">
-            Votre question, notre réponse
+            Votre <span className="text-medical-600">question</span>, notre réponse
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Testez vos connaissances avec un sondage rapide et découvrez les dernières questions de la communauté.

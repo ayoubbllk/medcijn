@@ -13,7 +13,7 @@ export async function TipsSection() {
             Astuces du moment
           </span>
           <h2 className="mt-3 text-3xl font-bold font-heading text-foreground md:text-4xl">
-            Petits gestes, grand cœur
+            Petits gestes, <span className="text-medical-600">grand cœur</span>
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
             Des conseils simples et concrets pour prendre soin de votre cœur au quotidien.

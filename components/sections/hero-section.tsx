@@ -1,39 +1,71 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Heart } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { PulseBlob } from "@/components/pulse-blob";
+import { HeartPulse, MessageCircle, Stethoscope, CalendarCheck } from "lucide-react";
 import { StatCounter } from "@/components/stat-counter";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/scroll-reveal";
 import { prisma } from "@/lib/prisma";
+
+function ChatBubble({
+  icon,
+  className,
+  delay = "0s",
+}: {
+  icon: React.ReactNode;
+  className?: string;
+  delay?: string;
+}) {
+  return (
+    <div
+      className={`absolute z-20 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-soft-lg animate-float ${className}`}
+      style={{ animationDelay: delay }}
+      aria-hidden="true"
+    >
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-medical-50 text-medical-600">
+        {icon}
+      </span>
+      <span className="flex flex-col gap-1.5">
+        <span className="h-2 w-20 rounded-full bg-medical-100" />
+        <span className="h-2 w-12 rounded-full bg-medical-50" />
+      </span>
+    </div>
+  );
+}
 
 export async function HeroSection() {
   const stats = await prisma.stat.findMany();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-medical-50/50 to-background py-16 md:py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-2xl">
+    <section className="px-3 pt-2 md:px-4">
+      <div className="gradient-hero relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] shadow-teal">
+        {/* Décor */}
+        <div className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-white/10 blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute -bottom-28 right-1/3 h-72 w-72 rounded-full bg-medical-900/25 blur-3xl" aria-hidden="true" />
+        <HeartPulse
+          className="pointer-events-none absolute -bottom-10 -right-10 h-64 w-64 text-white/10"
+          strokeWidth={1}
+          aria-hidden="true"
+        />
+
+        <div className="relative grid items-end gap-8 px-6 pt-12 md:px-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4 lg:pt-16">
+          <div className="max-w-xl pb-12 lg:pb-20">
             <ScrollReveal>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-medium text-medical-700 shadow-soft">
-                <Heart className="h-4 w-4 fill-accent text-accent" aria-hidden="true" />
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
+                <Stethoscope className="h-4 w-4" aria-hidden="true" />
                 Cabinet de cardiologie
               </span>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h1 className="mt-6 text-4xl font-bold leading-tight font-heading text-foreground md:text-5xl lg:text-6xl">
-                Comprendre et prendre soin de votre cœur
+              <h1 className="mt-6 text-4xl font-bold leading-tight font-heading text-white md:text-5xl lg:text-[3.4rem]">
+                Un cœur informé, un cœur protégé.
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
-                Bienvenue sur notre espace de sensibilisation. Nous partageons ici des conseils de
-                prévention, des astuces santé et des explications claires sur les explorations
-                médicales pour vous accompagner au quotidien.
+              <p className="mt-6 text-lg leading-relaxed text-white/90">
+                Le premier espace de sensibilisation cardiologique pensé pour les
+                patients algériens : astuces de prévention, explications claires
+                des examens et réponses à vos questions, en quelques clics.
               </p>
             </ScrollReveal>
 
@@ -41,59 +73,60 @@ export async function HeroSection() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   href="/blog"
-                  className={cn(
-                    buttonVariants({ size: "lg" }),
-                    "rounded-full bg-medical-700 px-6 py-6 text-base font-semibold text-white hover:bg-medical-800"
-                  )}
+                  className="inline-flex items-center rounded-full border-2 border-white px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white hover:text-medical-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
                   Découvrir les astuces santé
                 </Link>
                 <Link
                   href="/explorations"
-                  className={cn(
-                    buttonVariants({ variant: "outline", size: "lg" }),
-                    "rounded-full border-medical-200 px-6 py-6 text-base font-medium hover:bg-medical-50"
-                  )}
+                  className="inline-flex items-center rounded-full bg-white/15 px-7 py-3.5 text-base font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
-                  Les explorations médicales
+                  Les explorations
                 </Link>
               </div>
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={0.2} className="relative flex justify-center lg:justify-end">
-            <PulseBlob className="w-full max-w-md">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[40%_60%_55%_45%/55%_45%_60%_40%] bg-gradient-to-br from-medical-100 to-medical-200">
-                <Image
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
-                  alt="Cardiologue en blouse blanche souriant"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            </PulseBlob>
+          <ScrollReveal delay={0.2} className="relative hidden justify-end self-end lg:flex">
+            <ChatBubble
+              icon={<MessageCircle className="h-4 w-4" aria-hidden="true" />}
+              className="left-0 top-10"
+              delay="0s"
+            />
+            <ChatBubble
+              icon={<HeartPulse className="h-4 w-4" aria-hidden="true" />}
+              className="-left-16 top-40"
+              delay="1.2s"
+            />
+            <ChatBubble
+              icon={<CalendarCheck className="h-4 w-4" aria-hidden="true" />}
+              className="left-4 top-72"
+              delay="2.4s"
+            />
+
+            <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-t-[10rem]">
+              <Image
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
+                alt="Cardiologue en blouse blanche souriant"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 0px, 40vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-medical-700/30 to-transparent" aria-hidden="true" />
+            </div>
           </ScrollReveal>
         </div>
+      </div>
 
-        <StaggerContainer className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl">
+        <StaggerContainer className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
             <StaggerItem key={stat.id}>
               <StatCounter value={stat.value} suffix={stat.suffix || ""} label={stat.label} />
             </StaggerItem>
           ))}
         </StaggerContainer>
-      </div>
-
-      <div className="absolute bottom-4 left-1/2 hidden -translate-x-1/2 md:block">
-        <a
-          href="#explorations"
-          className="flex flex-col items-center gap-1 text-sm text-muted-foreground hover:text-medical-700 transition-colors"
-        >
-          <span>Explorer</span>
-          <ArrowDown className="h-4 w-4 animate-bounce" aria-hidden="true" />
-        </a>
       </div>
     </section>
   );

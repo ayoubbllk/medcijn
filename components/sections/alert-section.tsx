@@ -8,7 +8,7 @@ const alertSigns = [
     icon: <HeartCrack className="h-5 w-5 text-white" aria-hidden="true" />,
     title: "Douleur ou oppression thoracique",
     description:
-      "Une sensation d'oppression, d'écrasement ou de brûlure au centre de la poitrine, parfois irradiant vers le bras, la mâchoire ou le dos, peut être le signe d'une angine ou d'un infarctus. Appelez le 15 en cas de doute.",
+      "Une sensation d'oppression, d'écrasement ou de brûlure au centre de la poitrine, parfois irradiant vers le bras, la mâchoire ou le dos, peut être le signe d'une angine ou d'un infarctus. Appelez le 14 en cas de doute.",
   },
   {
     id: "shortness",
@@ -49,13 +49,14 @@ const alertSigns = [
 
 export function AlertSection() {
   return (
-    <section className="relative overflow-hidden bg-accent-400 py-20 md:py-28">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-white blur-3xl" />
-        <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-white blur-3xl" />
-      </div>
+    <section className="px-3 py-10 md:px-4">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-accent-400 px-6 py-14 md:px-12 md:py-20">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-white blur-3xl" />
+          <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-white blur-3xl" />
+        </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 md:px-6">
+        <div className="relative">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold text-white">
@@ -75,19 +76,20 @@ export function AlertSection() {
                 En cas d'urgence vitale, composez le
               </p>
               <a
-                href="tel:15"
-                className="mt-2 inline-flex items-center gap-3 rounded-xl bg-white px-6 py-3 text-2xl font-bold font-heading text-accent-600 transition-colors hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                href="tel:14"
+                className="mt-2 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-2xl font-bold font-heading text-accent-600 transition-colors hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <Phone className="h-6 w-6" aria-hidden="true" />
-                15
+                14
               </a>
-              <p className="mt-3 text-sm text-white/80">SAMU — Service d'aide médicale urgente</p>
+              <p className="mt-3 text-sm text-white/80">Protection civile — Secours médicaux d'urgence</p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <AlertAccordion items={alertSigns} />
           </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

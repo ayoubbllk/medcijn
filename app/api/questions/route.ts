@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
         author: author && typeof author === "string" ? author.trim().slice(0, 50) : null,
         content: content.trim().slice(0, 1000),
         answer:
-          "Merci pour votre question. Le médecin y répondra prochainement. N'oubliez pas qu'en cas d'urgence, vous devez contacter le 15.",
+          "Merci pour votre question. Le médecin y répondra prochainement. N'oubliez pas qu'en cas d'urgence, vous devez contacter le 14.",
         votes: 0,
       },
     });

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, HeartPulse } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/explorations", label: "Explorations" },
   { href: "/regimes", label: "Régimes" },
-  { href: "/qa", label: "Q&A" },
 ];
 
 export function Navbar() {
@@ -20,25 +19,29 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-white/90 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+    <header className="sticky top-0 z-50 w-full bg-white/85 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold font-heading text-medical-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg"
+          className="flex items-center gap-2.5 text-xl font-bold font-heading text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg"
         >
-          <Heart className="h-6 w-6 fill-accent text-accent" aria-hidden="true" />
-          <span>CardioConseils</span>
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl gradient-hero text-white shadow-soft">
+            <HeartPulse className="h-5 w-5" aria-hidden="true" />
+          </span>
+          <span>
+            Cardio<span className="text-medical-600">Conseils</span>
+          </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1 rounded-full border border-border/70 bg-white px-2 py-1 shadow-soft">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "px-4 py-2 text-sm font-medium rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                "px-4 py-2 text-sm font-medium rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 pathname === link.href
-                  ? "bg-medical-50 text-medical-700"
+                  ? "bg-medical-600 text-white"
                   : "text-muted-foreground hover:bg-medical-50 hover:text-medical-700"
               )}
               aria-current={pathname === link.href ? "page" : undefined}
@@ -46,6 +49,15 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+        </div>
+
+        <div className="hidden md:block">
+          <Link
+            href="/qa"
+            className="inline-flex items-center rounded-full bg-medical-600 px-6 py-2.5 text-sm font-semibold text-white shadow-teal transition-colors hover:bg-medical-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Posez votre question
+          </Link>
         </div>
 
         <button
@@ -77,9 +89,9 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "px-4 py-3 text-base font-medium rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    "px-4 py-3 text-base font-medium rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                     pathname === link.href
-                      ? "bg-medical-50 text-medical-700"
+                      ? "bg-medical-600 text-white"
                       : "text-muted-foreground hover:bg-medical-50 hover:text-medical-700"
                   )}
                   aria-current={pathname === link.href ? "page" : undefined}
@@ -87,6 +99,13 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/qa"
+                onClick={() => setIsOpen(false)}
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-medical-600 px-6 py-3 text-base font-semibold text-white"
+              >
+                Posez votre question
+              </Link>
             </div>
           </motion.div>
         )}

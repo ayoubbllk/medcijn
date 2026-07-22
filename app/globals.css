@@ -9,48 +9,48 @@
     --font-heading: "Poppins", system-ui, sans-serif;
     --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
 
-    --background: #F8FAFB;
-    --foreground: #1E2A32;
+    --background: #FFFFFF;
+    --foreground: #10333A;
     --card: #FFFFFF;
-    --card-foreground: #1E2A32;
+    --card-foreground: #10333A;
     --popover: #FFFFFF;
-    --popover-foreground: #1E2A32;
-    --primary: #2B5F7A;
+    --popover-foreground: #10333A;
+    --primary: #0D949C;
     --primary-foreground: #FFFFFF;
-    --secondary: #F0F4F6;
-    --secondary-foreground: #1E2A32;
-    --muted: #F0F4F6;
-    --muted-foreground: #5A6B75;
+    --secondary: #EFFBFB;
+    --secondary-foreground: #10333A;
+    --muted: #F2F8F8;
+    --muted-foreground: #587A80;
     --accent: #E8674A;
     --accent-foreground: #FFFFFF;
     --destructive: #E8674A;
     --destructive-foreground: #FFFFFF;
-    --border: #E2E8EC;
-    --input: #E2E8EC;
-    --ring: #4A8CAB;
+    --border: #E0EEEF;
+    --input: #E0EEEF;
+    --ring: #16B0B7;
     --radius: 1rem;
   }
 
   .dark {
-    --background: #0F1519;
-    --foreground: #F8FAFB;
-    --card: #1A2329;
-    --card-foreground: #F8FAFB;
-    --popover: #1A2329;
-    --popover-foreground: #F8FAFB;
-    --primary: #4A8CAB;
+    --background: #07181B;
+    --foreground: #F0FAFA;
+    --card: #0E2A2E;
+    --card-foreground: #F0FAFA;
+    --popover: #0E2A2E;
+    --popover-foreground: #F0FAFA;
+    --primary: #16B0B7;
     --primary-foreground: #FFFFFF;
-    --secondary: #243038;
-    --secondary-foreground: #F8FAFB;
-    --muted: #243038;
-    --muted-foreground: #9EACB4;
+    --secondary: #123A40;
+    --secondary-foreground: #F0FAFA;
+    --muted: #123A40;
+    --muted-foreground: #93B7BB;
     --accent: #E98870;
     --accent-foreground: #FFFFFF;
     --destructive: #E98870;
     --destructive-foreground: #FFFFFF;
-    --border: #2B3D47;
-    --input: #2B3D47;
-    --ring: #4A8CAB;
+    --border: #1B4A50;
+    --input: #1B4A50;
+    --ring: #16B0B7;
   }
 
   * {
@@ -92,11 +92,15 @@
   }
 
   .gradient-primary {
-    background: linear-gradient(135deg, #2B5F7A 0%, #4A8CAB 100%);
+    background: linear-gradient(135deg, #0F777E 0%, #16B0B7 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(120deg, #0D949C 0%, #16B0B7 55%, #45C7CC 100%);
   }
 
   .gradient-soft {
-    background: linear-gradient(135deg, #F0F6F9 0%, #FFFFFF 100%);
+    background: linear-gradient(135deg, #EFFBFB 0%, #FFFFFF 100%);
   }
 
   .gradient-warm {

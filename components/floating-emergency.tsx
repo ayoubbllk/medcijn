@@ -24,7 +24,7 @@ export function FloatingEmergency() {
               <div>
                 <p className="font-heading font-semibold text-foreground">Urgence cardiaque ?</p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  En cas de douleur thoracique, d'essoufflement brutal ou de malaise, appelez le 15.
+                  En cas de douleur thoracique, d'essoufflement brutal ou de malaise, appelez le 14.
                 </p>
               </div>
               <button
@@ -37,11 +37,11 @@ export function FloatingEmergency() {
               </button>
             </div>
             <a
-              href="tel:15"
-              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              href="tel:14"
+              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
-              Appeler le 15
+              Appeler le 14
             </a>
           </motion.div>
         )}

@@ -161,7 +161,7 @@ Plusieurs études ont montré que ce régime peut réduire le risque de maladies
 
 > **Disclaimer** : Ce contenu est informatif et ne remplace pas un avis médical personnalisé. Consultez votre cardiologue ou un nutritionniste avant toute modification importante de votre alimentation.`,
         category: "alimentation",
-        image: "/images/article-mediterraneen.jpg",
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
         readTime: 6,
         featured: true,
       },
@@ -193,7 +193,7 @@ Arrêtez immédiatement l'effort et consultez un médecin si vous ressentez :
 
 > **Disclaimer** : Ce contenu est informatif et ne remplace pas une consultation médicale.`,
         category: "activité physique",
-        image: "/images/article-activite.jpg",
+        image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80",
         readTime: 5,
       },
       {
@@ -228,7 +228,7 @@ Le cholestérol est une substance grasse nécessaire à la fabrication des hormo
 
 > **Disclaimer** : Ce contenu est informatif et ne remplace pas un avis médical.`,
         category: "pathologies",
-        image: "/images/article-cholesterol.jpg",
+        image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80",
         readTime: 7,
       },
       {
@@ -254,7 +254,7 @@ Si vous ronflez fort, si vous avez des pauses respiratoires pendant le sommeil o
 
 > **Disclaimer** : Ce contenu est informatif et ne remplace pas une consultation médicale.`,
         category: "sommeil",
-        image: "/images/article-sommeil.jpg",
+        image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80",
         readTime: 5,
       },
       {
@@ -279,7 +279,7 @@ Parler de ses difficultés, partager des moments avec ses proches et demander de
 
 > **Disclaimer** : Ce contenu est informatif et ne remplace pas un avis médical.`,
         category: "stress",
-        image: "/images/article-stress.jpg",
+        image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80",
         readTime: 4,
         featured: true,
       },
@@ -307,7 +307,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
 
 > **Disclaimer** : Ce contenu est informatif et ne remplace pas un avis médical.`,
         category: "tabac",
-        image: "/images/article-tabac.jpg",
+        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
         readTime: 4,
       },
     ],
@@ -331,7 +331,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
         ]),
         preparation:
           "Aucune préparation particulière n'est nécessaire. Évitez de faire du sport intense juste avant l'examen. Prévoyez une tenue permettant d'accéder facilement à la poitrine, aux chevilles et aux poignets.",
-        image: "/images/exploration-ecg.jpg",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
         icon: "activity",
       },
       {
@@ -350,7 +350,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
         ]),
         preparation:
           "Aucune préparation spécifique. Portez une tenue confortable. Vous pouvez manger et prendre vos médicaments normalement.",
-        image: "/images/exploration-echo.jpg",
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
         icon: "heart-pulse",
       },
       {
@@ -369,7 +369,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
         ]),
         preparation:
           "Venez en tenue de sport et avec des chaussures adaptées. Évitez de manger un repas copieux dans les 2 heures précédant l'examen. Poursuivez vos traitements habituels sauf avis contraire de votre médecin.",
-        image: "/images/exploration-effort.jpg",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
         icon: "bike",
       },
       {
@@ -388,7 +388,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
         ]),
         preparation:
           "Prenez une douche avant la pose, car vous ne pourrez pas vous mouiller pendant l'enregistrement. Portez des vêtements amples pour dissimuler le boîtier.",
-        image: "/images/exploration-holter.jpg",
+        image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=800&q=80",
         icon: "clock",
       },
       {
@@ -407,7 +407,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
         ]),
         preparation:
           "Le bilan lipidique nécessite généralement d'être à jeun (12 heures sans manger, eau autorisée). Suivez les consignes du laboratoire et de votre médecin.",
-        image: "/images/exploration-lipides.jpg",
+        image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=80",
         icon: "flask-conical",
       },
     ],
@@ -518,7 +518,7 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
         author: "Luc, 45 ans",
         content: "Quels sont les signes d'alerte d'un infarctus ?",
         answer:
-          "Les signes principaux sont une douleur intense au centre de la poitrine, une sensation d'écrasement, une douleur irradiant dans le bras gauche, la mâchoire ou le dos, un essoufflement, des nausées ou des sueurs. En cas de doute, appelez le 15 (SAMU) immédiatement.",
+          "Les signes principaux sont une douleur intense au centre de la poitrine, une sensation d'écrasement, une douleur irradiant dans le bras gauche, la mâchoire ou le dos, un essoufflement, des nausées ou des sueurs. En cas de doute, appelez le 14 (Protection civile) immédiatement.",
         votes: 23,
       },
     ],
@@ -529,35 +529,35 @@ La cigarette favorise la formation de plaques d'athérome, augmente la tension a
       {
         title: "Mangez 5 portions de fruits et légumes par jour",
         category: "alimentation",
-        image: "/images/tip-fruits.jpg",
+        image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80",
         summary:
           "Les fruits et légumes apportent vitamines, minéraux et fibres qui protègent les vaisseaux sanguins.",
       },
       {
         title: "Marchez 30 minutes chaque jour",
         category: "activité physique",
-        image: "/images/tip-marche.jpg",
+        image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80",
         summary:
           "Une marche régulière suffit à améliorer la circulation, la pression artérielle et le moral.",
       },
       {
         title: "Respirez 5 minutes pour apaiser le cœur",
         category: "stress",
-        image: "/images/tip-respiration.jpg",
+        image: "https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=600&q=80",
         summary:
           "La respiration lente et profonde active le système nerveux parasympathique et réduit le stress.",
       },
       {
         title: "Dites stop au tabac",
         category: "tabac",
-        image: "/images/tip-tabac.jpg",
+        image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
         summary:
           "Arrêter de fumer est le geste le plus impactant pour votre cœur. Les bénéfices commencent dès les premières heures.",
       },
       {
         title: "Dormez 7 à 8 heures par nuit",
         category: "sommeil",
-        image: "/images/tip-sommeil.jpg",
+        image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
         summary:
           "Un sommeil réparateur régule la tension artérielle et diminue l'inflammation chronique.",
       },

@@ -109,8 +109,8 @@ export function SurveyCard({ survey }: SurveyCardProps) {
             </p>
             <p className="mt-1 text-sm leading-relaxed">
               {isCorrect
-                ? "En cas d'AVC, les signes d'alerte peuvent tous apparaître : visage qui tombe, bras qui ne se lève plus, parole perturbée. Agissez vite et appelez le 15."
-                : "La bonne réponse est 'Toutes ces réponses'. Face qui tombe, bras qui ne se lève plus, parole perturbée : ce sont les signes d'alerte d'un AVC. Appelez le 15."}
+                ? "En cas d'AVC, les signes d'alerte peuvent tous apparaître : visage qui tombe, bras qui ne se lève plus, parole perturbée. Agissez vite et appelez le 14."
+                : "La bonne réponse est 'Toutes ces réponses'. Face qui tombe, bras qui ne se lève plus, parole perturbée : ce sont les signes d'alerte d'un AVC. Appelez le 14."}
             </p>
             <button
               type="button"

@@ -42,7 +42,7 @@ export default async function QAPage() {
                   <p className="text-sm leading-relaxed text-accent-700">
                     Les réponses publiées ici sont à visée éducative. Elles ne constituent pas un
                     diagnostic ni une consultation personnalisée. En cas de symptômes, consultez
-                    votre médecin ou appelez le 15 en urgence.
+                    votre médecin ou appelez le 14 en urgence.
                   </p>
                 </div>
               </div>
