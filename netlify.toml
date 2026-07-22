@@ -1,7 +1,9 @@
-# Déploiement Netlify de la version statique (sans base de données)
+# Déploiement de la version HTML statique (dossier static/)
+# Désactive le runtime Next.js installé via l'UI Netlify.
 [build]
   publish = "static"
-  command = "echo 'Static site — no build required'"
+  command = "echo Static site ready"
 
 [build.environment]
   NODE_VERSION = "20"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
