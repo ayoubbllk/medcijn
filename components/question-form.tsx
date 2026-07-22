@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -15,8 +14,6 @@ export function QuestionForm() {
   const [content, setContent] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
   const reducedMotion = useReducedMotion();
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -24,31 +21,12 @@ export function QuestionForm() {
     if (!content.trim()) return;
 
     setIsSubmitting(true);
-    setError(null);
-
-    try {
-      const response = await fetch("/api/questions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          author: author.trim() || null,
-          content: content.trim(),
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Une erreur est survenue lors de l'envoi de la question.");
-      }
-
-      setSuccess(true);
-      setAuthor("");
-      setContent("");
-      router.refresh();
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Erreur inconnue");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Site statique : confirmation locale (pas d'API / base de données)
+    await new Promise((resolve) => setTimeout(resolve, 400));
+    setSuccess(true);
+    setAuthor("");
+    setContent("");
+    setIsSubmitting(false);
   };
 
   return (
@@ -79,12 +57,6 @@ export function QuestionForm() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {error && (
-        <div className="mt-4 rounded-xl bg-red-50 p-4 text-red-800" role="alert">
-          <p className="text-sm font-medium">{error}</p>
-        </div>
-      )}
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
         <div className="space-y-2">

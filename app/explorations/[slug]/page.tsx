@@ -6,9 +6,7 @@ import { Activity, HeartPulse, Bike, Clock, FlaskConical, Stethoscope, LucideIco
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/scroll-reveal";
-import { prisma } from "@/lib/prisma";
-
-export const dynamic = "force-dynamic";
+import { explorations, getExplorationBySlug } from "@/lib/data";
 
 const iconMap: Record<string, LucideIcon> = {
   activity: Activity,
@@ -23,10 +21,12 @@ interface ExplorationPageProps {
   params: { slug: string };
 }
 
+export function generateStaticParams() {
+  return explorations.map((exploration) => ({ slug: exploration.slug }));
+}
+
 export async function generateMetadata({ params }: ExplorationPageProps): Promise<Metadata> {
-  const exploration = await prisma.exploration.findUnique({
-    where: { slug: params.slug },
-  });
+  const exploration = getExplorationBySlug(params.slug);
 
   if (!exploration) {
     return { title: "Exploration introuvable — CardioConseils" };
@@ -39,9 +39,7 @@ export async function generateMetadata({ params }: ExplorationPageProps): Promis
 }
 
 export default async function ExplorationDetailPage({ params }: ExplorationPageProps) {
-  const exploration = await prisma.exploration.findUnique({
-    where: { slug: params.slug },
-  });
+  const exploration = getExplorationBySlug(params.slug);
 
   if (!exploration) {
     notFound();

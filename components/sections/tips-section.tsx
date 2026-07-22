@@ -1,10 +1,8 @@
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { TipsCarousel } from "@/components/tips-carousel";
-import { prisma } from "@/lib/prisma";
+import { tips } from "@/lib/data";
 
 export async function TipsSection() {
-  const tips = await prisma.tip.findMany();
-
   return (
     <section className="bg-gradient-to-b from-background to-medical-50/30 py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6">

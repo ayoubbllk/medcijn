@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HeartPulse, MessageCircle, Stethoscope, CalendarCheck } from "lucide-react";
 import { StatCounter } from "@/components/stat-counter";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/scroll-reveal";
-import { prisma } from "@/lib/prisma";
+import { stats } from "@/lib/data";
 
 function ChatBubble({
   icon,
@@ -32,8 +32,6 @@ function ChatBubble({
 }
 
 export async function HeroSection() {
-  const stats = await prisma.stat.findMany();
-
   return (
     <section className="px-3 pt-2 md:px-4">
       <div className="gradient-hero relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] shadow-teal">

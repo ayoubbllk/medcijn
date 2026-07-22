@@ -1,8 +1,7 @@
-# Déploiement de la version HTML statique (dossier static/)
-# Désactive le runtime Next.js installé via l'UI Netlify.
+# Export statique Next.js (dossier out/)
 [build]
-  publish = "static"
-  command = "echo Static site ready"
+  command = "npm run build"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"

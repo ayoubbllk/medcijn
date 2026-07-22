@@ -11,7 +11,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/scroll-reveal";
-import { prisma } from "@/lib/prisma";
+import { explorations as allExplorations } from "@/lib/data";
 
 const iconMap: Record<string, LucideIcon> = {
   activity: Activity,
@@ -23,7 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export async function ExplorationsSection() {
-  const explorations = await prisma.exploration.findMany({ take: 4 });
+  const explorations = allExplorations.slice(0, 4);
 
   return (
     <section id="explorations" className="py-20 md:py-28">

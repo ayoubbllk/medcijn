@@ -3,19 +3,15 @@ import { QAList } from "@/components/qa-list";
 import { QuestionForm } from "@/components/question-form";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { AlertTriangle } from "lucide-react";
-import { prisma } from "@/lib/prisma";
-
-export const dynamic = "force-dynamic";
+import { getQuestionsSorted } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Q&A Communautaire — CardioConseils",
   description: "Posez vos questions anonymement sur la santé cardiaque et découvrez les réponses du médecin.",
 };
 
-export default async function QAPage() {
-  const questions = await prisma.question.findMany({
-    orderBy: { createdAt: "desc" },
-  });
+export default function QAPage() {
+  const questions = getQuestionsSorted();
 
   return (
     <div className="py-16 md:py-24">

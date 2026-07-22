@@ -8,8 +8,6 @@ import { InteractionSection } from "@/components/sections/interaction-section";
 import { NewsSection } from "@/components/sections/news-section";
 import { ECGDivider } from "@/components/ecg-divider";
 
-export const dynamic = "force-dynamic";
-
 export default function HomePage() {
   return (
     <>

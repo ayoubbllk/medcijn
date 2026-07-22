@@ -28,17 +28,6 @@ export function SurveyCard({ survey }: SurveyCardProps) {
     const correct = index === survey.correctAnswer;
     setIsCorrect(correct);
     setHasSubmitted(true);
-
-    try {
-      await fetch("/api/survey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ surveyId: survey.id, option: index, isCorrect: correct }),
-      });
-    } catch (error) {
-      // Silently fail; the educational feedback is what matters most
-      console.error("Erreur lors de l'enregistrement du sondage", error);
-    }
   };
 
   const reset = () => {

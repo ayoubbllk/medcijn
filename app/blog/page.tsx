@@ -1,19 +1,15 @@
 import { Metadata } from "next";
 import { BlogFilter } from "@/components/blog-filter";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { prisma } from "@/lib/prisma";
-
-export const dynamic = "force-dynamic";
+import { getArticlesSorted } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Blog — CardioConseils",
   description: "Découvrez nos articles sur la prévention cardiovasculaire, l'alimentation, l'activité physique et les pathologies du cœur.",
 };
 
-export default async function BlogPage() {
-  const articles = await prisma.article.findMany({
-    orderBy: { publishedAt: "desc" },
-  });
+export default function BlogPage() {
+  const articles = getArticlesSorted();
 
   return (
     <div className="py-16 md:py-24">

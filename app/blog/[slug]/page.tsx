@@ -6,18 +6,18 @@ import { ArrowLeft, Share2, Clock, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { prisma } from "@/lib/prisma";
-
-export const dynamic = "force-dynamic";
+import { articles, getArticleBySlug } from "@/lib/data";
 
 interface BlogPostPageProps {
   params: { slug: string };
 }
 
+export function generateStaticParams() {
+  return articles.map((article) => ({ slug: article.slug }));
+}
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const article = await prisma.article.findUnique({
-    where: { slug: params.slug },
-  });
+  const article = getArticleBySlug(params.slug);
 
   if (!article) {
     return { title: "Article introuvable — CardioConseils" };
@@ -30,9 +30,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const article = await prisma.article.findUnique({
-    where: { slug: params.slug },
-  });
+  const article = getArticleBySlug(params.slug);
 
   if (!article) {
     notFound();

@@ -2,18 +2,14 @@ import { Metadata } from "next";
 import { RegimeCard } from "@/components/regime-card";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/scroll-reveal";
 import { AlertTriangle } from "lucide-react";
-import { prisma } from "@/lib/prisma";
-
-export const dynamic = "force-dynamic";
+import { regimes } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Régimes & Nutrition — CardioConseils",
   description: "Fiches nutritionnelles adaptées à l'hypertension, au cholestérol et au post-infarctus. Contenu informatif, ne remplace pas une consultation médicale.",
 };
 
-export default async function RegimesPage() {
-  const regimes = await prisma.regime.findMany();
-
+export default function RegimesPage() {
   return (
     <div className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">

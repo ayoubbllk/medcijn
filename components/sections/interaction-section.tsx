@@ -4,14 +4,10 @@ import { QACard } from "@/components/qa-card";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { prisma } from "@/lib/prisma";
+import { survey, getTopQuestions } from "@/lib/data";
 
 export async function InteractionSection() {
-  const survey = await prisma.survey.findFirst();
-  const questions = await prisma.question.findMany({
-    orderBy: { votes: "desc" },
-    take: 2,
-  });
+  const questions = getTopQuestions(2);
 
   return (
     <section className="py-20 md:py-28">

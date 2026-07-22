@@ -29,12 +29,6 @@ export function QAList({ questions }: QAListProps) {
 
     setVotes((prev) => ({ ...prev, [id]: (prev[id] || 0) + 1 }));
     setVoted((prev) => ({ ...prev, [id]: true }));
-
-    try {
-      await fetch(`/api/questions/${id}/vote`, { method: "POST" });
-    } catch (error) {
-      console.error("Erreur lors du vote", error);
-    }
   };
 
   return (

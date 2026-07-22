@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Activity, HeartPulse, Bike, Clock, FlaskConical, Stethoscope, LucideIcon, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/card";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/scroll-reveal";
-import { prisma } from "@/lib/prisma";
+import { explorations } from "@/lib/data";
 
 const iconMap: Record<string, LucideIcon> = {
   activity: Activity,
@@ -14,16 +14,12 @@ const iconMap: Record<string, LucideIcon> = {
   stethoscope: Stethoscope,
 };
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Explorations médicales — CardioConseils",
   description: "Découvrez les explorations médicales proposées par notre cabinet de cardiologie : ECG, échocardiographie, épreuve d'effort, Holter et bilan lipidique.",
 };
 
-export default async function ExplorationsPage() {
-  const explorations = await prisma.exploration.findMany();
-
+export default function ExplorationsPage() {
   return (
     <div className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
